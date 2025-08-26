@@ -505,8 +505,11 @@ data-styled.g3827[id="sc-keyframes-fAnrlM"]{content:"fAnrlM,"}/*!sc*/
     <main>
      <section class="section__Section-sc-b7df443b-0 section__BackgroundSection-sc-b7df443b-1 page-layout__BG-sc-690d2da5-0 jHJcmV eEeoZI kCiAUE" style="background-image: url('https://static.xingcdn.com/crate/entry-685f503a/Background_01_7x2_a-863d5f3ac02162689146d27bef34552b.svg'); background-repeat: no-repeat; background-size: 110%;
     background-position-x: 55%; padding-bottom: 76px; padding-inline: 68px;padding-block: 24px; min-width: 320px;"><div class="theme-mode-switcher-styles__ThemeModeSwitcher-sc-7edf7afc-0 kIPvcm is-light-theme"><h1 class="hero-styles__Hero-sc-3d821a90-0 eqcMnl hd" data-xds="Hero">XING Stellenanzeigen</h1></div></section>
-        <a href="#" class="back-link">&lt;- Set your budget</a>
+        
         <div class="budget-card">
+		<div style="font-size: 18px;"><a href=""><svg width="42" height="42" viewBox="0 0 42 42" fill="none" style="display:inline;" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.2929 15.2929L12.5858 21L18.2929 26.7071L19.7071 25.2929L16.415 21.9999L29 22V20L16.415 19.9999L19.7071 16.7071L18.2929 15.2929Z" fill="#1D2124"/>
+</svg></a><b> Set your budget</b></div>
             <div class="row">
                 <div class="left">
                     <h3><b>Choose the maximum amount you want to spend</b></h3>
@@ -523,10 +526,10 @@ data-styled.g3827[id="sc-keyframes-fAnrlM"]{content:"fAnrlM,"}/*!sc*/
                     <div class="budget-type-box low-budget" id="budget-type">Low budget. Budget-friendly option with limited reach</div>
                 </div>
                 <div class="right">
-                    <h2><b>Smart Budget</b>  <span class="tag new">New</span></h2>
+                    <h2 style="font-size: 18px;"><b>Smart Budget</b>  <span class="tag new">New</span></h2>
                     <div class="smart-desc">
-                        <p style="color: grey;">Starts at</p>
-						<h1><b>100€</b></h1>
+                        <p id="smart-budget-text" style="color: grey;">Starts at</p>
+						<h1  id="budget-amount"><b>100€</b></h1>
                         <p>Perfect for recruiters who want to get the most out of their budget.</p>
                     </div>
                     <button class="checkout-button"><b>Continue to checkout</b></button>
@@ -564,11 +567,20 @@ data-styled.g3827[id="sc-keyframes-fAnrlM"]{content:"fAnrlM,"}/*!sc*/
         const budgetType = document.getElementById('budget-type');
         const minusBtn = document.getElementById('minus-btn');
         const plusBtn = document.getElementById('plus-btn');
-
+      const budgetAmount = document.getElementById('budget-amount');
+        const smartBudgetText = document.getElementById('smart-budget-text');
+		
         function updateBudget() {
             const value = parseInt(slider.value);
             const clicks = Math.floor(value / 2);
             totalBox.textContent = `Total: €${value} - ${clicks} clicks`;
+
+if (value === 100) {
+                smartBudgetText.textContent = "Starts at";
+            } else {
+                smartBudgetText.textContent = "Total selected";
+            }
+            budgetAmount.innerHTML = `<b>${value}€</b>`;
 
             const min = 100;
             const max = 1500;
