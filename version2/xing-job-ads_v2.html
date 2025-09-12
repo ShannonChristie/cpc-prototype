@@ -397,15 +397,15 @@
         <nav class="nav">
             <div class="nav-item">
                 <div class="nav-icon"></div>
-                Jobs finden
+                Find jobs
             </div>
             <div class="nav-item">
                 <div class="nav-icon"></div>
-                Meine Jobs
+                My jobs
             </div>
             <div class="nav-item">
                 <div class="nav-icon"></div>
-                Netzwerk
+                Network
             </div>
             <div class="nav-item">
                 <div class="nav-icon"></div>
@@ -413,35 +413,35 @@
             </div>
             <div class="nav-item">
                 <div class="nav-icon"></div>
-                Nachrichten
+                Messages
             </div>
             <div class="nav-item">
                 <div class="nav-icon"></div>
-                Benachrichtigungen
+                Notifications
             </div>
             <div class="nav-item">
                 <div class="nav-icon"></div>
-                Suche
+                Search
             </div>
             <div class="profile"></div>
             <div class="nav-item">
                 <div class="nav-icon"></div>
-                Produkte
+                Products
             </div>
         </nav>
     </header>
 
     <div class="main-content">
         <div style="width: 100%; max-width: 1200px;">
-            <h1 class="page-title">XING Stellenanzeigen</h1>
+            <h1 class="page-title">XING Job Ads</h1>
             
             <div class="budget-container">
-                <div class="back-arrow">Budget festlegen</div>
+                <div class="back-arrow">Set your budget</div>
                 
                 <div class="budget-content">
                     <div class="budget-left">
                         <div class="slider-section">
-                            <div class="slider-label">Wählen Sie den maximalen Betrag, den Sie ausgeben möchten</div>
+                            <div class="slider-label">Choose the maximum amount you want to spend</div>
                             
                             <div class="slider-container">
                                 <button class="slider-btn" id="decreaseBtn">−</button>
@@ -455,15 +455,15 @@
                                 <button class="slider-btn" id="increaseBtn">+</button>
                             </div>
                             
-                            <div class="total-info" id="totalInfo">Gesamt: €100 - 2-6 Potenzial Bewerbungsabsichten</div>
+                            <div class="total-info" id="totalInfo">Total: €100 - 2-6 potential apply intents</div>
                             
-                            <div id="budgetTag" class="budget-tag low-budget">Niedriges Budget</div>
-                            <span id="budgetDesc">Budgetfreundliche Option mit begrenzter Reichweite</span>
+                            <div id="budgetTag" class="budget-tag low-budget">Low budget</div>
+                            <span id="budgetDesc">Budget-friendly option with limited reach</span>
                             
                             <div class="how-it-works">
-                                <div class="how-it-works-title">ℹ So funktioniert es:</div>
+                                <div class="how-it-works-title">ℹ How it works:</div>
                                 <div class="how-it-works-text">
-                                    Wählen Sie ein Budget zwischen €100 und €1.500 (in €50-Schritten). Bei jedem Klick auf Ihre Stellenanzeige werden €2 von Ihrem Budget abgezogen. Wir berechnen Ihnen €100 im Voraus zur Aktivierung Ihrer Anzeige, und der verbleibende Betrag—bis zu Ihrem gewählten Budget—wird nach 60 Tagen abgerechnet. Wenn Ihr Budget vorher aufgebraucht ist, stoppt die Anzeige automatisch.
+                                    Choose a budget between €100 and €1,500 (in €50 steps). Each time someone clicks your job ad, €2 is deducted from your budget. We bill you €100 in advance to activate your ad, and the remaining amount—up to your selected budget—is billed after 60 days. If your budget runs out before then, the ad stops automatically.
                                 </div>
                             </div>
                         </div>
@@ -473,22 +473,22 @@
                         <div class="smart-budget">
                             <div class="smart-budget-header">
                                 <div class="smart-budget-title">Smart Budget</div>
-                                <div class="new-badge">Neu</div>
+                                <div class="new-badge">New</div>
                             </div>
                             
-                            <div id="smartBudgetLabel" style="font-size: 14px; color: #666; margin-bottom: 8px;">Beginnt bei</div>
+                            <div id="smartBudgetLabel" style="font-size: 14px; color: #666; margin-bottom: 8px;">Starts at</div>
                             <div class="smart-budget-price" id="smartBudgetPrice">€100</div>
                             
                             <div class="smart-budget-desc">
-                                Perfekt für Recruiter, die das Beste aus ihrem Budget herausholen möchten.
+                                Perfect for recruiters who want to get the most out of their budget.
                             </div>
                             
-                            <button class="continue-btn">Weiter zur Kasse</button>
+                            <button class="continue-btn">Continue to checkout</button>
                             
                             <ul class="features">
-                                <li class="feature">Laufzeit von bis zu 60 Tagen</li>
-                                <li class="feature">Zugang zum XING JobManager</li>
-                                <li class="feature">Stellenanzeige auf XING veröffentlicht</li>
+                                <li class="feature">Runtime of up to 60 days</li>
+                                <li class="feature">Access to the XING JobManager</li>
+                                <li class="feature">Job ad published on XING</li>
                             </ul>
                         </div>
                     </div>
@@ -498,11 +498,11 @@
                     <div class="continue-later-content">
                         <div class="continue-later-icon"></div>
                         <div>
-                            <div class="continue-later-title">Lieber später fortfahren?</div>
-                            <div class="continue-later-desc">Erstellen Sie ein kostenloses JobManager-Konto, um Ihre Stellenausschreibung zu speichern und später ein Paket zu wählen.</div>
+                            <div class="continue-later-title">Prefer to continue later?</div>
+                            <div class="continue-later-desc">Create a free JobManager account to save your job posting and choose a package later.</div>
                         </div>
                     </div>
-                    <button class="continue-later-btn">Später fortfahren</button>
+                    <button class="continue-later-btn">Continue later</button>
                 </div>
             </div>
         </div>
@@ -553,26 +553,26 @@
             const tier = getBudgetTier(value);
             
             // Update total info with application range
-            totalInfo.textContent = `Gesamt: €${value} - ${applicationRange} Potenzial Bewerbungsabsichten`;
+            totalInfo.textContent = `Total: €${value} - ${applicationRange} potential apply intents`;
             
             // Update budget tag and description based on tier
             let tagText, tagClass, desc, smartLabel;
             
             if (tier === 'low') {
-                tagText = 'Niedriges Budget';
+                tagText = 'Low budget';
                 tagClass = 'low-budget';
-                desc = 'Budgetfreundliche Option mit begrenzter Reichweite';
-                smartLabel = 'Beginnt bei';
+                desc = 'Budget-friendly option with limited reach';
+                smartLabel = 'Starts at';
             } else if (tier === 'medium') {
-                tagText = 'Mittleres Budget';
+                tagText = 'Medium budget';
                 tagClass = 'medium-budget';
-                desc = 'Ausgewogene Option für gute Reichweite';
-                smartLabel = 'Gesamt gewählt';
+                desc = 'Balanced option for good reach';
+                smartLabel = 'Total selected';
             } else {
-                tagText = 'Hohes Budget';
+                tagText = 'High budget';
                 tagClass = 'high-budget';
-                desc = 'Mehr Möglichkeiten, Klicks von aktiven Stellensuchenden zu konvertieren';
-                smartLabel = 'Gesamt gewählt';
+                desc = 'More opportunities to convert clicks from active job seekers';
+                smartLabel = 'Total selected';
             }
             
             budgetTag.textContent = tagText;
